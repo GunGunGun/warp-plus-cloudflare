@@ -21,9 +21,10 @@ def digitString(stringLength):
 		return ''.join((random.choice(digit) for i in range(stringLength)))    
 	except Exception as error:
 		print(error)	
-url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
+
 def run():
 	try:
+		url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 		install_id = genString(22)
 		body = {"key": "{}=".format(genString(43)),
 				"install_id": install_id,
